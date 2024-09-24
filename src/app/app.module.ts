@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrimengSidebarModule } from './components/primeng-sidebar/primeng-sidebar.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PrimengToolbarModule } from './components/primeng-toolbar/primeng-toolbar.module';
+import { HeaderModule } from './components/header/header.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +14,7 @@ import { PrimengToolbarModule } from './components/primeng-toolbar/primeng-toolb
     BrowserAnimationsModule,
     AppRoutingModule,
     PrimengSidebarModule,
-    PrimengToolbarModule,
+    HeaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

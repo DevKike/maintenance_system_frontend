@@ -11,4 +11,8 @@ export class AppComponent {
   toggleSidebar() {
     this.sidebarVisible = !this.sidebarVisible;
   }
+
+  onSidebarVisibleChange(visible: boolean) {
+    this.sidebarVisible = visible;
+  }
 }

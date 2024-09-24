@@ -1,2 +1,2 @@
-<app-primeng-toolbar (sidebarToggle)="toggleSidebar()"></app-primeng-toolbar>
-<app-primeng-sidebar [visible]="sidebarVisible"></app-primeng-sidebar>
+<app-header (sidebarToggle)="toggleSidebar()"></app-header>
+<app-primeng-sidebar [visible]="sidebarVisible" (visibleChange)="onSidebarVisibleChange($event)"></app-primeng-sidebar>

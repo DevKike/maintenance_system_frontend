@@ -1,4 +1,4 @@
-<p-sidebar [(visible)]="visible">
+<p-sidebar [(visible)]="visible" (onHide)="closeSidebar()">
     <ng-template pTemplate="header">
         <div class="flex align-items-center gap-2">
             <p-avatar 

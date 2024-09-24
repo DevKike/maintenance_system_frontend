@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-primeng-toolbar',
-  templateUrl: './primeng-toolbar.component.html',
-  styleUrl: './primeng-toolbar.component.css'
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css'
 })
-export class PrimengToolbarComponent {
+export class HeaderComponent {
   @Output() sidebarToggle = new EventEmitter<void>();
 
   toggleSidebar() {

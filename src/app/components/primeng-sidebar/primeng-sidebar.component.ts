@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-primeng-sidebar',
@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class PrimengSidebarComponent {
   @Input() visible: boolean = false;
+  @Output() visibleChange = new EventEmitter<boolean>();
+
+  closeSidebar() {
+    this.visible = false;
+    this.visibleChange.emit(this.visible);
+  }
 }
