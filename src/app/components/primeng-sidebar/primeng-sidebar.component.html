@@ -1,11 +1,27 @@
-<p-sidebar [(visible)]="visible" (onHide)="closeSidebar()">
+<p-sidebar [(visible)]="visible" (onHide)="closeSidebar()" class="custom-sidebar">
     <ng-template pTemplate="header">
-        <div class="flex align-items-center gap-2">
-            <p-avatar 
-                image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" 
-                shape="circle" />
-            <span class="font-bold">Amy Elsner</span>
-        </div>
+        <h3 class="sidebar-header">Menu</h3>
     </ng-template>
-    <p>Contenido del sidebar...</p>
+    <!--Sidebar content-->
+    <div class="sidebar-content">
+        <ul class="sidebar-list">
+            <li>
+                <i class="pi pi-home mr-2"></i>
+                <span>Dashboard</span>
+            </li>
+            <li>
+                <i class="pi pi-users mr-2"></i>
+                <span>Users</span>
+            </li>
+            <li>
+                <i class="pi pi-cog mr-2"></i>
+                <span>Settings</span>
+            </li>
+            <li>
+                <i class="pi pi-calendar mr-2"></i>
+                <span>Reports</span>
+            </li>
+        </ul>
+        
+    </div>
 </p-sidebar>
