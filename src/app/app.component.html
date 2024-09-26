@@ -1,2 +1,8 @@
 <app-header (sidebarToggle)="toggleSidebar()"></app-header>
 <app-primeng-sidebar [visible]="sidebarVisible" (visibleChange)="onSidebarVisibleChange($event)"></app-primeng-sidebar>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/users">Users</a>
+  <a routerLink="/dashboard">Dashboard</a>
+</nav>
+<router-outlet></router-outlet>

@@ -37,9 +37,26 @@
 }
 
 .sidebar-list i {
-    color: #007bff; 
+    color: #007bff;
+    font-size: 1.5rem; /* Aumentar el tamaño del icono */
 }
 
 .sidebar-list span {
     color: #333;
+}
+
+.sidebar-list button {
+    background: none;
+    border: none;
+    color: #000000; /* Color del texto */
+    cursor: pointer;
+    text-align: left; /* Alinear texto a la izquierda */
+    padding: 10px 0; /* Espaciado */
+    width: 100%; /* Hacer que el botón ocupe todo el ancho */
+    font-size: 1.2rem; /* Aumentar el tamaño de la fuente */
+    font-family: 'Roboto', sans-serif; /* Cambiar a la fuente seleccionada */
+}
+
+.sidebar-list button:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el mouse */
 }

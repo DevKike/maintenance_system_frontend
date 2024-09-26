@@ -2,26 +2,24 @@
     <ng-template pTemplate="header">
         <h3 class="sidebar-header">Menu</h3>
     </ng-template>
-    <!--Sidebar content-->
     <div class="sidebar-content">
         <ul class="sidebar-list">
             <li>
-                <i class="pi pi-home mr-2"></i>
-                <span>Dashboard</span>
+                <i class="pi pi-home"></i>
+                <button (click)="navigateTo('/dashboard')">Dashboard</button>
             </li>
             <li>
-                <i class="pi pi-users mr-2"></i>
-                <span>Users</span>
+                <i class="pi pi-users"></i>
+                <button (click)="navigateTo('/users')">Users</button>
             </li>
             <li>
-                <i class="pi pi-cog mr-2"></i>
-                <span>Settings</span>
+                <i class="pi pi-cog"></i>
+                <button (click)="navigateTo('/settings')">Settings</button>
             </li>
             <li>
-                <i class="pi pi-calendar mr-2"></i>
-                <span>Reports</span>
+                <i class="pi pi-calendar"></i>
+                <button (click)="navigateTo('/reports')">Reports</button>
             </li>
         </ul>
-        
     </div>
 </p-sidebar>
