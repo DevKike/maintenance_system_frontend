@@ -39,19 +39,19 @@ export class PrimengSidebarComponent {
                     items: [
                         {
                             label: 'Actors',
-                            icon: 'pi pi-user',
+                            icon: 'pi pi-user-plus',
 
                         },
 
                     ]
                 },
                 {
-                    label: 'All Users',
-                    icon: 'pi pi-image',
+                    label: 'View Users',
                     items: [
                         {
-                            label: 'Logos',
-                            icon: 'pi pi-image'
+                            label: 'All Users',
+                            icon: 'pi pi-users',
+                            command: () => this.navigateTo('/users')
                         }
                     ]
                 }
