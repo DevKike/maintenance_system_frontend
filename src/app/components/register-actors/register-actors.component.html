@@ -1,0 +1,49 @@
+<div class="card-container">
+  <p-card header="Register a user" [style]="{ width: '600px' }" class="custom-card">
+    <ng-template pTemplate="header">
+    </ng-template>
+
+    <div class="form-container">
+      <div class="input-row">
+        <p-floatLabel>
+          <input id="name" type="text" pInputText (ngModel)="name" />
+          <label for="name">Name</label>
+        </p-floatLabel>
+        <p-floatLabel>
+          <input id="lastName" type="text" pInputText (ngModel)="lastName" />
+          <label for="lastName">Last Name</label>
+        </p-floatLabel>
+      </div>
+      <div class="input-row">
+        <p-floatLabel>
+          <input id="phone" type="text" pInputText (ngModel)="phone" />
+          <label for="phone">Phone Number</label>
+        </p-floatLabel>
+        <p-floatLabel>
+          <input id="email" type="text" pInputText (ngModel)="email" />
+          <label for="email">Email</label>
+        </p-floatLabel>
+      </div>
+      <div class="input-row">
+        <p-floatLabel>
+          <input id="document" type="text" pInputText (ngModel)="document" />
+          <label for="document">Document Number</label>
+        </p-floatLabel>
+        <p-floatLabel>
+          <input id="documentType" type="text" pInputText (ngModel)="documentType" />
+          <label for="documentType">Document Type</label>
+        </p-floatLabel>
+      </div>
+      <div class="input-row">
+        <p-floatLabel>
+          <input id="status" type="text" pInputText (ngModel)="status" />
+          <label for="status">Status</label>
+        </p-floatLabel>
+        <p-floatLabel>
+          <input id="role" type="text" pInputText (ngModel)="role" />
+          <label for="role">Role</label>
+        </p-floatLabel>
+      </div>
+    </div>
+  </p-card>
+</div>

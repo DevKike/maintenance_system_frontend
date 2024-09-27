@@ -1,0 +1,44 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+input {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+    flex: 1;
+    min-width: 0;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.p-card {
+    width: auto;
+    max-width: 100%; 
+
+
+}
+
+

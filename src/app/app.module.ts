@@ -11,6 +11,8 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { ReportsComponent } from './components/reports/reports.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DashboardModule } from './components/dashboard/dashboard.module';
+import { RegisterActorsComponent } from './components/register-actors/register-actors.component';
+import { RegisterActorsModule } from './components/register-actors/register-actors.module';
 
 @NgModule({
   declarations: [AppComponent, UsersComponent, SettingsComponent, ReportsComponent],
@@ -20,7 +22,8 @@ import { DashboardModule } from './components/dashboard/dashboard.module';
     AppRoutingModule,
     PrimengSidebarModule,
     HeaderModule,
-    DashboardModule
+    DashboardModule,
+    RegisterActorsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

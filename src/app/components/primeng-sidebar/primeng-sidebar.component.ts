@@ -13,7 +13,6 @@ export class PrimengSidebarComponent {
   @Output() visibleChange = new EventEmitter<boolean>();
   items!: MenuItem[];
 
-  isUsersSubmenuOpen: boolean = false;  // Variable para controlar el submenu de Users
 
   constructor(private router: Router) {}
 
@@ -40,7 +39,7 @@ export class PrimengSidebarComponent {
                         {
                             label: 'Actors',
                             icon: 'pi pi-user-plus',
-
+                            command: () => this.navigateTo('/register_actors')
                         },
 
                     ]
