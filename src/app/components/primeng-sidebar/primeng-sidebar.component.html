@@ -1,25 +1,8 @@
 <p-sidebar [(visible)]="visible" (onHide)="closeSidebar()" class="custom-sidebar">
-    <ng-template pTemplate="header">
-        <h3 class="sidebar-header">Menu</h3>
-    </ng-template>
-    <div class="sidebar-content">
-        <ul class="sidebar-list">
-            <li>
-                <i class="pi pi-home"></i>
-                <button (click)="navigateTo('/dashboard')">Dashboard</button>
-            </li>
-            <li>
-                <i class="pi pi-users"></i>
-                <button (click)="navigateTo('/users')">Users</button>
-            </li>
-            <li>
-                <i class="pi pi-cog"></i>
-                <button (click)="navigateTo('/settings')">Settings</button>
-            </li>
-            <li>
-                <i class="pi pi-calendar"></i>
-                <button (click)="navigateTo('/reports')">Reports</button>
-            </li>
-        </ul>
-    </div>
+
+  <div class="sidebar-content">
+    <h3 class="sidebar-header">Menu</h3>
+      <p-panelMenu [model]="items" styleClass="w-full md:w-20rem" />
+
+  </div>
 </p-sidebar>

@@ -60,3 +60,16 @@
 .sidebar-list button:hover {
     background-color: #e9ecef; /* Color de fondo al pasar el mouse */
 }
+
+.submenu-list {
+  list-style-type: none;
+  padding-left: 20px;  /* Indentación del submenú */
+}
+
+.submenu-list li {
+  padding: 5px 0;
+}
+
+.submenu-list button {
+  font-size: 1rem;
+}

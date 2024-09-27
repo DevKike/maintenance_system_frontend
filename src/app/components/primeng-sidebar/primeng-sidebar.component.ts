@@ -1,15 +1,19 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { MenuItem } from 'primeng/api/menuitem';
 
 @Component({
   selector: 'app-primeng-sidebar',
   templateUrl: './primeng-sidebar.component.html',
-  styleUrl: './primeng-sidebar.component.css'
+  styleUrls: ['./primeng-sidebar.component.css']
 })
 export class PrimengSidebarComponent {
 
   @Input() visible: boolean = false;
   @Output() visibleChange = new EventEmitter<boolean>();
+  items!: MenuItem[];
+
+  isUsersSubmenuOpen: boolean = false;  // Variable para controlar el submenu de Users
 
   constructor(private router: Router) {}
 
@@ -20,6 +24,75 @@ export class PrimengSidebarComponent {
 
   navigateTo(route: string) {
     this.router.navigate([route]);
-    this.closeSidebar(); 
+    this.closeSidebar();
   }
+
+  ngOnInit() {
+    this.items = [
+        {
+            label: 'Users',
+            icon: 'pi pi-user',
+            items: [
+                {
+                    label: 'Register',
+                    icon: '',
+                    items: [
+                        {
+                            label: 'Actors',
+                            icon: 'pi pi-user',
+
+                        },
+
+                    ]
+                },
+                {
+                    label: 'All Users',
+                    icon: 'pi pi-image',
+                    items: [
+                        {
+                            label: 'Logos',
+                            icon: 'pi pi-image'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            label: 'Cloud',
+            icon: 'pi pi-cloud',
+            items: [
+                {
+                    label: 'Upload',
+                    icon: 'pi pi-cloud-upload'
+                },
+                {
+                    label: 'Download',
+                    icon: 'pi pi-cloud-download'
+                },
+                {
+                    label: 'Sync',
+                    icon: 'pi pi-refresh'
+                }
+            ]
+        },
+        {
+            label: 'Devices',
+            icon: 'pi pi-desktop',
+            items: [
+                {
+                    label: 'Phone',
+                    icon: 'pi pi-mobile'
+                },
+                {
+                    label: 'Desktop',
+                    icon: 'pi pi-desktop'
+                },
+                {
+                    label: 'Tablet',
+                    icon: 'pi pi-tablet'
+                }
+            ]
+        }
+    ]
+}
 }
