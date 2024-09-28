@@ -1,5 +1,15 @@
 import { Component } from '@angular/core';
 
+interface Document {
+  name: string;
+}
+
+interface Role {
+  role: string;
+}
+interface State {
+  status: string;
+}
 @Component({
   selector: 'app-register-actors',
   templateUrl: './register-actors.component.html',
@@ -13,6 +23,33 @@ export class RegisterActorsComponent {
   email!: string;
   document!: number;
   documentType!: string;
-  status!: string;
-  role!: string;
+
+  documents!: Document[];
+  selectedDocuments!: Document[];
+
+  roles!: Role[];
+  selectedRoles!: Role[];
+
+  status!: State[]
+  selectedStatus!: State[];
+
+  ngOnInit() {
+    this.documents = [
+      { name: 'Cédula de ciudadanía' },
+      { name: 'Cédula de extranjería' },
+      { name: 'Pasaporte' },
+      { name: 'Registro civil' },
+    ];
+
+    this.roles = [
+      { role: 'System Assitant' },
+      { role: 'System Auxiliary' },
+    ];
+
+    this.status = [
+      { status: 'Active' },
+      { status: 'Inactive' },
+      { status: 'Suspended' },
+    ];
+  }
 }

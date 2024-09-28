@@ -1,5 +1,5 @@
 <div class="card-container">
-  <p-card header="Register a user" [style]="{ width: '600px' }" class="custom-card">
+  <p-card header="Register a User" [style]="{ width: '600px' }" class="custom-card">
     <ng-template pTemplate="header">
     </ng-template>
 
@@ -29,20 +29,23 @@
           <input id="document" type="text" pInputText (ngModel)="document" />
           <label for="document">Document Number</label>
         </p-floatLabel>
-        <p-floatLabel>
-          <input id="documentType" type="text" pInputText (ngModel)="documentType" />
-          <label for="documentType">Document Type</label>
-        </p-floatLabel>
+        <p-dropdown
+        [options]="documents"
+        [(ngModel)]="selectedDocuments"
+        optionLabel="name"
+        placeholder="Type Document" />
       </div>
       <div class="input-row">
-        <p-floatLabel>
-          <input id="status" type="text" pInputText (ngModel)="status" />
-          <label for="status">Status</label>
-        </p-floatLabel>
-        <p-floatLabel>
-          <input id="role" type="text" pInputText (ngModel)="role" />
-          <label for="role">Role</label>
-        </p-floatLabel>
+        <p-dropdown
+        [options]="status"
+        [(ngModel)]="selectedStatus"
+        optionLabel="status"
+        placeholder="Select a Status" />
+        <p-dropdown
+        [options]="roles"
+        [(ngModel)]="selectedRoles"
+        optionLabel="role"
+        placeholder="Select a Role" />
       </div>
     </div>
   </p-card>
