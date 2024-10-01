@@ -1,0 +1,12 @@
+.flex {
+    display: flex;
+    justify-content: center; /* Centra los elementos en el eje horizontal */
+}
+
+.flex.gap-3 {
+    gap: 60px; /* Ajusta el espacio entre los botones */
+}
+
+.p-button {
+    margin: 5px; /* Agrega un margen a los botones */
+}
