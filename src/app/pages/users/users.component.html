@@ -1,1 +1,19 @@
-<p>users works!</p>
+<app-primeng-table>
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-user>
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </ng-template>
+
+</app-primeng-table>

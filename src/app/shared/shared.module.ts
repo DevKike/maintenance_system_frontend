@@ -13,7 +13,8 @@ import { ButtonModule } from 'primeng/button';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
-
+import { PrimengTableComponent } from './components/primeng-table/primeng-table.component';
+import { TableModule } from 'primeng/table';
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -22,6 +23,7 @@ import { DropdownModule } from 'primeng/dropdown';
     RegisterActorsComponent,
     CardComponent,
     DropdownComponent,
+    PrimengTableComponent,
   ],
   imports: [
     CommonModule,
@@ -32,8 +34,9 @@ import { DropdownModule } from 'primeng/dropdown';
     ButtonModule,
     FormsModule,
     DropdownModule,
+    TableModule
   ],
 
-  exports: [DashboardComponent, HeaderComponent, PrimengSidebarComponent],
+  exports: [DashboardComponent, HeaderComponent, PrimengSidebarComponent,PrimengTableComponent],
 })
 export class SharedModule {}
