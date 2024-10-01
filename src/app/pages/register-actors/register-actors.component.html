@@ -1,52 +1,40 @@
 <div class="card-container">
-  <p-card header="Register a User" [style]="{ width: '600px' }" class="custom-card">
-    <ng-template pTemplate="header">
-    </ng-template>
-
+  <app-card header="Register a User" subheader="Complete the form below" content="">
     <div class="form-container">
       <div class="input-row">
         <p-floatLabel>
-          <input id="name" type="text" pInputText (ngModel)="name" />
+          <input id="name" type="text" pInputText [(ngModel)]="name" />
           <label for="name">Name</label>
         </p-floatLabel>
         <p-floatLabel>
-          <input id="lastName" type="text" pInputText (ngModel)="lastName" />
+          <input id="lastName" type="text" pInputText [(ngModel)]="lastName" />
           <label for="lastName">Last Name</label>
         </p-floatLabel>
       </div>
       <div class="input-row">
         <p-floatLabel>
-          <input id="phone" type="text" pInputText (ngModel)="phone" />
+          <input id="phone" type="text" pInputText [(ngModel)]="phone" />
           <label for="phone">Phone Number</label>
         </p-floatLabel>
         <p-floatLabel>
-          <input id="email" type="text" pInputText (ngModel)="email" />
+          <input id="email" type="text" pInputText [(ngModel)]="email" />
           <label for="email">Email</label>
         </p-floatLabel>
       </div>
       <div class="input-row">
         <p-floatLabel>
-          <input id="document" type="text" pInputText (ngModel)="document" />
+          <input id="document" type="text" pInputText [(ngModel)]="document" />
           <label for="document">Document Number</label>
         </p-floatLabel>
-        <p-dropdown
-        [options]="documents"
-        [(ngModel)]="selectedDocuments"
-        optionLabel="name"
-        placeholder="Type Document" />
+        <p-dropdown [options]="documents" [(ngModel)]="selectedDocuments" optionLabel="name"
+          placeholder="Type Document" />
       </div>
       <div class="input-row">
-        <p-dropdown
-        [options]="status"
-        [(ngModel)]="selectedStatus"
-        optionLabel="status"
-        placeholder="Select a Status" />
-        <p-dropdown
-        [options]="roles"
-        [(ngModel)]="selectedRoles"
-        optionLabel="role"
-        placeholder="Select a Role" />
+        <app-dropdown [options]="status" [(ngModel)]="selectedStatus" optionLabel="status"
+          placeholder="Select a Status"></app-dropdown>
+        <app-dropdown [options]="roles" [(ngModel)]="selectedRoles" optionLabel="role"
+          placeholder="Select a Role"></app-dropdown>
       </div>
     </div>
-  </p-card>
+  </app-card>
 </div>
